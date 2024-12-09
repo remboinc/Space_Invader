@@ -195,7 +195,7 @@ async def animate_spaceship(canvas, start_row, start_column):
 
         max_rows, max_columns = canvas.getmaxyx()
 
-        if (row + frame_row) >= max_rows:
+        if row + frame_row >= max_rows:
             row = max_rows - frame_row
         if row <= 0:
             row = 0
