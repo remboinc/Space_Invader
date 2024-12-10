@@ -38,10 +38,10 @@ def draw(canvas):
     ]
     while True:
         canvas.refresh()
+        time.sleep(0.1)
         for coroutine in coroutines.copy():
             try:
                 coroutine.send(None)
-                time.sleep(0.001)
             except StopIteration:
                 coroutines.remove(coroutine)
 
